@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@firebase/remote-config": "https://firebasestorage.googleapis.com/v0/b/jeff-storage-90953.appspot.com/o/firebase-remote-config-v0.4.0.tgz?alt=media&token=5ea368b9-a797-4e33-aa63-485dd1b79190",
     "firebase": "^9.14.0",
     "firebase-admin": "^11.3.0",
     "firebase-tools": "^11.16.0"

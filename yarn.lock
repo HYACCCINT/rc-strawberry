@@ -33,6 +33,17 @@
   "resolved" "https://registry.npmjs.org/@firebase/app-types/-/app-types-0.8.1.tgz"
   "version" "0.8.1"
 
+"@firebase/app@0.x":
+  "integrity" "sha512-sa15stSK6FoGW4mCeAVDt0TvBFxPjvNcG2rhacGudOzMaW3g2TS326zXTFG+p5jnTCPZ2SO5TTSiGHn1NNcD9Q=="
+  "resolved" "https://registry.npmjs.org/@firebase/app/-/app-0.9.0.tgz"
+  "version" "0.9.0"
+  dependencies:
+    "@firebase/component" "0.6.0"
+    "@firebase/logger" "0.4.0"
+    "@firebase/util" "1.8.0"
+    "idb" "7.0.1"
+    "tslib" "^2.1.0"
+
 "@firebase/auth-interop-types@0.1.7":
   "integrity" "sha512-yA/dTveGGPcc85JP8ZE/KZqfGQyQTBCV10THdI8HTlP1GDvNrhr//J5jAt58MlsCOaO3XmC4DqScPBbtIsR/EA=="
   "resolved" "https://registry.npmjs.org/@firebase/auth-interop-types/-/auth-interop-types-0.1.7.tgz"
@@ -44,6 +55,14 @@
   "version" "0.5.21"
   dependencies:
     "@firebase/util" "1.7.3"
+    "tslib" "^2.1.0"
+
+"@firebase/component@0.6.0":
+  "integrity" "sha512-9hyNc4OmrXMtthDJq6zyJHll/UIYBWYmMG3rXty2eMeWxHWB0vlsq3AOI+k14PL15aSBAQolv0EZJWVJv/gCEg=="
+  "resolved" "https://registry.npmjs.org/@firebase/component/-/component-0.6.0.tgz"
+  "version" "0.6.0"
+  dependencies:
+    "@firebase/util" "1.8.0"
     "tslib" "^2.1.0"
 
 "@firebase/database-compat@^0.2.6":
@@ -78,6 +97,16 @@
     "faye-websocket" "0.11.4"
     "tslib" "^2.1.0"
 
+"@firebase/installations@0.6.0":
+  "integrity" "sha512-Aks56ThZs1MsM0qJzJxhdeXak+Ob3tjd3JSY2poJptreLWsIOSBCxYO7Ev4yZ7DE7twMdZ0x70NhQ1ceXfdy0w=="
+  "resolved" "https://registry.npmjs.org/@firebase/installations/-/installations-0.6.0.tgz"
+  "version" "0.6.0"
+  dependencies:
+    "@firebase/component" "0.6.0"
+    "@firebase/util" "1.8.0"
+    "idb" "7.0.1"
+    "tslib" "^2.1.0"
+
 "@firebase/logger@0.3.4":
   "integrity" "sha512-hlFglGRgZEwoyClZcGLx/Wd+zoLfGmbDkFx56mQt/jJ0XMbfPqwId1kiPl0zgdWZX+D8iH+gT6GuLPFsJWgiGw=="
   "resolved" "https://registry.npmjs.org/@firebase/logger/-/logger-0.3.4.tgz"
@@ -85,10 +114,35 @@
   dependencies:
     "tslib" "^2.1.0"
 
+"@firebase/logger@0.4.0":
+  "integrity" "sha512-eRKSeykumZ5+cJPdxxJRgAC3G5NknY2GwEbKfymdnXtnT0Ucm4pspfR6GT4MUQEDuJwRVbVcSx85kgJulMoFFA=="
+  "resolved" "https://registry.npmjs.org/@firebase/logger/-/logger-0.4.0.tgz"
+  "version" "0.4.0"
+  dependencies:
+    "tslib" "^2.1.0"
+
+"@firebase/remote-config@https://firebasestorage.googleapis.com/v0/b/jeff-storage-90953.appspot.com/o/firebase-remote-config-v0.4.0.tgz?alt=media&token=5ea368b9-a797-4e33-aa63-485dd1b79190":
+  "integrity" "sha512-4GiF2cO1PyrQyGlKtZGH9j/8jY/Pg7WC56o6R07SCZgGD5MOPmqWQJe/Cp31XG3iF1gDhdRM5ZP92t7tVd86eQ=="
+  "resolved" "https://firebasestorage.googleapis.com/v0/b/jeff-storage-90953.appspot.com/o/firebase-remote-config-v0.4.0.tgz?alt=media&token=5ea368b9-a797-4e33-aa63-485dd1b79190"
+  "version" "0.4.0"
+  dependencies:
+    "@firebase/component" "0.6.0"
+    "@firebase/installations" "0.6.0"
+    "@firebase/logger" "0.4.0"
+    "@firebase/util" "1.8.0"
+    "tslib" "^2.1.0"
+
 "@firebase/util@1.7.3", "@firebase/util@1.x":
   "integrity" "sha512-wxNqWbqokF551WrJ9BIFouU/V5SL1oYCGx1oudcirdhadnQRFH5v1sjgGL7cUV/UsekSycygphdrF2lxBxOYKg=="
   "resolved" "https://registry.npmjs.org/@firebase/util/-/util-1.7.3.tgz"
   "version" "1.7.3"
+  dependencies:
+    "tslib" "^2.1.0"
+
+"@firebase/util@1.8.0":
+  "integrity" "sha512-clK6pTTxIiLMYz4UrvDTVAs2rIaOiroAuFdX67C0JalvEwzi6Vv8li6xAGj38tkj7Qax06mosM1fQkxf2h4VTg=="
+  "resolved" "https://registry.npmjs.org/@firebase/util/-/util-1.8.0.tgz"
+  "version" "1.8.0"
   dependencies:
     "tslib" "^2.1.0"
 
@@ -1924,7 +1978,6 @@
     "@firebase/performance" "0.5.17"
     "@firebase/performance-compat" "0.1.17"
     "@firebase/remote-config" "0.3.15"
-    "@firebase/remote-config-compat" "0.1.16"
     "@firebase/storage" "0.9.14"
     "@firebase/storage-compat" "0.1.22"
     "@firebase/util" "1.7.3"
@@ -2396,6 +2449,11 @@
   "version" "0.6.3"
   dependencies:
     "safer-buffer" ">= 2.1.2 < 3.0.0"
+
+"idb@7.0.1":
+  "integrity" "sha512-UUxlE7vGWK5RfB/fDwEGgRf84DY/ieqNha6msMV99UsEMQhJ1RwbCd8AYBj3QMgnE3VZnfQvm4oKVCJTYlqIgg=="
+  "resolved" "https://registry.npmjs.org/idb/-/idb-7.0.1.tgz"
+  "version" "7.0.1"
 
 "ieee754@^1.1.13":
   "integrity" "sha512-dcyqhDvX1C46lXZcVqCpK+FtMRQVdIMN6/Df5js2zouUsqG7I6sFxitIC+7KYK29KdXOLHdu9zL4sFnoVQnqaA=="
