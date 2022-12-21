@@ -17,14 +17,13 @@ const firebaseConfig = {
   appId: "1:105225960024:web:a2c70ff84e835a7d22682d"
 };
 
+const app = initializeApp(firebaseConfig);
+const remoteConfig = getRemoteConfig(app);
+connectRemoteConfigEmulator(remoteConfig, 'http://127.0.0.1:9399')
+
 function App() {
 
   // window.FIREBASE_REMOTE_CONFIG_URL_BASE = "http://127.0.0.1:9399/"
-
-  const app = initializeApp(firebaseConfig);
-  
-  const remoteConfig = getRemoteConfig(app);
-  connectRemoteConfigEmulator(remoteConfig, 'http://127.0.0.1:9399')
 
   const [configs, setConfigs] = useState({
     "welcome_message": "",
@@ -35,7 +34,7 @@ function App() {
   function getConfigs () {
     fetchAndActivate(remoteConfig)
     .then(async () => {
-      const welcome_message = getValue(remoteConfig, "welcome_message");
+      const welcome_message = getValue(remoteConfig, "welcome_message")._value;
       const welcome_message_caps = await getValue(remoteConfig, "welcome_message_caps")._value;
       const header_text = await getValue(remoteConfig, "header_text")._value;
       setConfigs({...configs, welcome_message: welcome_message, welcome_message_caps: welcome_message_caps, header_text: header_text})
