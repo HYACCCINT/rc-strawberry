@@ -19,6 +19,7 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const remoteConfig = getRemoteConfig(app);
+remoteConfig.settings.minimumFetchIntervalMillis = 0;
 connectRemoteConfigEmulator(remoteConfig, 'http://127.0.0.1:9399')
 
 function App() {
