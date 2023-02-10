@@ -34,9 +34,10 @@ function App() {
   function getConfigs () {
     fetchAndActivate(remoteConfig)
     .then(async () => {
-      const welcome_message = getValue(remoteConfig, "welcome_message")._value;
+      const welcome_message = await getValue(remoteConfig, "welcome_message")._value;
       const welcome_message_caps = await getValue(remoteConfig, "welcome_message_caps")._value;
       const header_text = await getValue(remoteConfig, "header_text")._value;
+      console.log("welcome_message", welcome_message)
       setConfigs({...configs, welcome_message: welcome_message, welcome_message_caps: welcome_message_caps, header_text: header_text})
     });
     // const options = {
@@ -56,7 +57,6 @@ function App() {
     // } );
     
   }
-
 
   return (
     <div className="App">
